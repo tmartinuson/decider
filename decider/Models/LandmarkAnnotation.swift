@@ -1,0 +1,21 @@
+//
+//  LandmarkAnnotation.swift
+//  decider
+//
+//  Created by Tristan Martinuson on 2020-09-01.
+//  Copyright © 2020 Tristan Martinuson. All rights reserved.
+//
+
+import Foundation
+import MapKit
+import UIKit
+
+final class LandmarkAnnotation: NSObject, MKAnnotation {
+    let title: String?
+    let coordinate: CLLocationCoordinate2D
+    
+    init(landmark: Landmark) {
+        self.title = landmark.name
+        self.coordinate = landmark.coordinate
+    }
+}
